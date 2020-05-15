@@ -2,7 +2,7 @@
 
 ## Project Description
 
-This project is a simple application that can be expanded with later features. Inspired by the TV Drama "Breaking Bad", this application provides the user with a randomly selected character from the TV show with their name, nickname, actor(ess) name, and picture. It also displays a randomly selected drink with name, ingredients, mixing instructions, and serving container.
+This project is a simple application that can be expanded with later features. Inspired by the TV Drama "Breaking Bad" (BB), this application presents the user with a drink choice. Each drink choice leads to an information page on a BB character with their name, nickname, actor(ess) name, and picture. It also displays a selected drink with name, ingredients, and mixing instructions.
 
 This responsive application has a foundation in HTML, CSS and Javascript. It utilizes a Bulma CSS framework and three separate APIs. The focus was on clean and simple code that would allow for easy expansion with new features as the project developed. 
 
@@ -86,6 +86,35 @@ APIs
 Our team objective was to create a simple application that was entertaining to the user. As we began, we tried to divide the work in consideration of each members strengths and weaknesses. Lindsey and Samantha tackled selecting and learning the new CSS Framework for the project. Ashley and Heather were assigned to handle the Javascript and API tasks. To establish communication, we decided to perform daily stand-ups at least one per day and use Slack as an open communication channel between team members. To facilitate project task management, we chose to use the GitHub project tab's built in kanban feature to allow each member to freely create task items which could be claimed and tracked throughout the project.
 
 ## Project Lessons
+
+### MVP - Minimum Viable Product
+The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
+
+Welcome page
+- Asks the user whether or not they are 21
+- Has an image topper
+- Has a no button that trigger the "Too Bad" page
+- Has a yess button that triggers the "Pick Your Poison" page
+
+Too Bad Page
+- Funny pic for image topper
+- Text stating "Haha! You are not not bad enough"
+- Home button to return to "Welcome" page
+- Background set by particle.js
+
+Pick Your Poison Page
+- Buttons that trigger the "Character" page
+- Each button will have an image of a drink
+- Each button will lead to a specific BB character's page
+
+Character Page
+- Image of the BB character
+- BB character name, nickname, and current status
+- Actor(ess) that portrays the character
+- Background set by particle.js
+- Image of selected drink
+- Ingredients list for the drink
+- Instruction on how to mix the drink
 
 ## Screenshots of Application
 
