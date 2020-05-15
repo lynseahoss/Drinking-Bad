@@ -6,7 +6,11 @@ $("#no-btn").on("click", function () {
   $("#card-bodytext").text("")
   $("#yes-btn").css("display", "none")
   $("#no-btn").css("display", "none")
-  $("<button>").addClass("ui inverted red button centered").text("Home").appendTo("#button-group")
+  $("<button>").addClass("ui inverted red button centered").attr("id", "home").text("Home").appendTo("#button-group")
+
+  $("#home").on("click", function() {
+      location.reload()
+  })
 
 }
 )
