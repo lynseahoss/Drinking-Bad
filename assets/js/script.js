@@ -1,5 +1,26 @@
 //this fixed it
 
+$("#no-btn").on("click", function () {
+  $("#question").text("Ha, You're not Bad Enough")
+  $("#image").attr("src", "assets/image/bbNo.jpg")
+  $("#card-bodytext").text("")
+  $("#yes-btn").css("display", "none")
+  $("#no-btn").css("display", "none")
+  $("<button>").addClass("ui inverted red button centered").text("Home").appendTo("#button-group")
+
+}
+)
+
+$("#yes-btn").on("click", function () {
+  $("#question").text("Pick Your Poison")
+  $("#image").attr("src", "assets/image/mask.jpg")
+  $("#card-bodytext").text("TO SEE HOW BAD YOU ARE...")
+  $("#yes-btn").text("Click If You Dare")
+  $("#no-btn").css("display", "none")
+
+}
+)
+
  // Creates AJAX call for random Breaking Bad
  $.ajax({
     url: "https://www.breakingbadapi.com/api/character/random",
