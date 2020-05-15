@@ -19,7 +19,7 @@
  
   });
  
-  // Creates AJAX call for Drink
+  // Creates AJAX call for Drink API
   $.ajax({
      url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
      method: "GET"
