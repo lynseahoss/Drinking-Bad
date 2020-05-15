@@ -1,5 +1,6 @@
 
- // Creates AJAX call for Breaking Bad
+
+ // Creates AJAX call for random Breaking Bad
  $.ajax({
     url: "https://www.breakingbadapi.com/api/character/random",
     method: "GET"
@@ -19,7 +20,7 @@
  
   });
  
-  // Creates AJAX call for Drink API
+  // Creates AJAX call for random Drink API
   $.ajax({
      url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
      method: "GET"
