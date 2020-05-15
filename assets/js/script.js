@@ -1,4 +1,4 @@
-
+//this fixed it
 
  // Creates AJAX call for random Breaking Bad
  $.ajax({
