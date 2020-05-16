@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-   
-    <link rel="stylesheet" href="assets/css/style.css">
-   <!-- tab icon link -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- tab icon link -->
     <link
       rel="shortcut icon"
       type="image/png"
       href="https://www.denofgeek.com/wp-content/uploads/2013/07/288895.jpg?resize=636%2C432"
     />
     <title>Drinking Bad</title>
-</head>
-<body>
-        
+  </head>
+  <body>
     <!-- 1st Container when page is loaded -->
-    <div class ="ui raised very padded text container segment">  
-        <!-- 1st Popup when page is loaded -->
-        <div class="ui card centered" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
+    <div id="container" class="ui raised very padded text container segment">
+      <!-- 1st Popup when page is loaded -->
+      <div
+        id = "pop-up" class="ui card centered"
+        data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>"
+      >
         <div class="image">
-          <img id="image" src="assets/image/Screen Shot 2020-05-14 at 8.01.25 PM.png">
+          <img
+            id="image"
+            src="assets/image/Screen Shot 2020-05-14 at 8.01.25 PM.png"
+          />
         </div>
         <div class="content">
-          <div id= "question" class="ui header centered">Are you 21?</div>
-          <div id= "card-bodytext" class="ui centered description ">
-           Get your drink on with Heisenberg
+          <div id="question" class="ui header centered">Are you 21?</div>
+          <div id="card-bodytext" class="ui centered description">
+            Get your drink on with Heisenberg
           </div>
         </div>
         <div id="button-group" class="ui two bottom attached buttons">
-            <button id="yes-btn" class="ui inverted pink button">Yes</button>
-            <button id= "no-btn" class="ui inverted purple button">No</button>
+          <button id="yes-btn" class="ui inverted pink button">Yes</button>
+          <button id="no-btn" class="ui inverted purple button">No</button>
+        </div>
       </div>
-
-
-    </div>
     </div>
     <!-- 2nd Container: No Clicked -->
     <!-- <div class ="ui raised very padded text container segment">   -->
-        <!-- 2nd Popup: No  -->
-        <!-- <div class="ui card centered" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
+    <!-- 2nd Popup: No  -->
+    <!-- <div class="ui card centered" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
         <div class="image">
           <img class="ui massive image" src="assets/image/bbNo.jpg">
         </div>
@@ -57,8 +64,8 @@
     </div>
 </div>
        -->
-<!-- 3rd Container: Yes clicked: Pick Your Poison (PYP)   -->
-<!-- <div class ="ui raised very padded text container segment">   -->
+    <!-- 3rd Container: Yes clicked: Pick Your Poison (PYP)   -->
+    <!-- <div class ="ui raised very padded text container segment">   -->
     <!-- 3rd Popup: Yes clicked: Pick Your Poison (PYP) -->
     <!-- <div class="ui card centered" data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
     <div class="image">
@@ -76,40 +83,31 @@
   </div>
 </div>
 </div> -->
-    
-<!-- 4th Container: PYP Clicked: Drink Images  -->
-<!-- <div class ="ui raised very padded text container segment">   -->
-    <!-- 4th: PYP Clicked: Drink Images -->
-    <!-- <div class="ui container centered">
-    <div class="ui small images ">
-        
-        <img src="assets/image/bbNo.jpg"> 
-        <img src="assets/image/bbNo.jpg"> 
-        <img src="assets/image/bbNo.jpg">
-    </div>
-</div>
-    <div class="ui small images centered">
-        
-            <img src="assets/image/bbNo.jpg"> 
-            <img src="assets/image/bbNo.jpg"> 
-            <img src="assets/image/bbNo.jpg">
-            
-          
+
+    <!-- 4th Container: PYP Clicked: Drink Images  -->
+    <!-- <div class="ui raised very padded text container segment"> -->
+      <!-- 4th: PYP Clicked: Drink Images -->
+      <!-- <div class="ui container centered">
+        <div class="ui small images">
+          <img src="assets/image/bbNo.jpg" />
+          <img src="assets/image/bbNo.jpg" />
+          <img src="assets/image/bbNo.jpg" />
         </div>
+      </div>
+      <div class="ui small images centered">
+        <img src="assets/image/bbNo.jpg" />
+        <img src="assets/image/bbNo.jpg" />
+        <img src="assets/image/bbNo.jpg" />
+      </div>
+    </div> -->
 
-</div> -->
-
-    
     <!-- jquery cdn  -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- semantic cdn  -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
+    <!-- semantic cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
     <!-- particles cdn -->
-  
 
-    
     <!-- The js in the code is meant to flip the popup or image- need to read up on it.
         <script>
     $('.green.leaf')
@@ -120,6 +118,5 @@
 ;
     </script> -->
     <script src="./assets/js/script.js"></script>
-</body>
-
+  </body>
 </html>
