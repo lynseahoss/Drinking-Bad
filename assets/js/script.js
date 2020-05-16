@@ -51,13 +51,15 @@ $("#yes-btn").on("click", function () {
         url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
         method: "GET",
       }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrinks);
-        $("<img>")
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .appendTo("#drink-div2");
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>").attr("data-name", response.drinks[0].idDrink).attr("src", response.drinks[0].strDrinkThumb).addClass("drink-btn").appendTo("#drink-div2");
       });
     }
   });
+});
+
+$(document).on("click", ".drink-btn", function characterSelect() {
+  console.log($(this).attr("data-name"));
 });
 // $.ajax({
 //   url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
