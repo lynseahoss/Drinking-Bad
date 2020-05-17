@@ -28,9 +28,33 @@ $("#btn-one").on("click", function () {
   .attr("id", "dare-btn")
   .text("Click if You Dare")
   .appendTo("#button-group");
-  $("#btn-two").css("display", "none");
+  $("#btn-two").css("display", "none")
   $("<button>")
-    
+    .addClass("ui inverted violet button centered")
+    .attr("id", "lucky")
+    .text("Feelin' lucky?")
+    .appendTo("#button-group")
+  
+  $("#lucky").on("click", function () {
+    $(".content").css("display", "none");
+    $("#pop-up").css("display", "none");
+    $("#image").css("display", "none");
+    $("#dare-btn").css("display", "none");
+
+    $("<div>")
+      .addClass("ui centered segment")
+      .attr("id", "segment-div")
+      .appendTo("#container");
+      $("<div>")
+      .attr("id", "image-group")
+      .appendTo("#segment-div");
+      $("<img>")
+      .addClass("ui centered small image")
+      .attr("src", "https://st4.depositphotos.com/5249193/22833/v/1600/depositphotos_228336628-stock-illustration-beautiful-girl-drinking-champagne-illustration.jpg")
+      .appendTo("#image-group");
+      $("<p>").text("API DRINK INFO HERE")
+      .appendTo("#segment-div")
+    })
 
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
@@ -73,9 +97,11 @@ $(document).on("click", ".drink-btn", function characterSelect() {
   $("<br>").appendTo("#character-card")
   $("<div>").attr("id", "button-group2").addClass("ui two bottom attached buttons").appendTo("#container")
   btnOne.css("display", "block").appendTo("#button-group2").text("Try Again")
-  btnTwo.css("display", "block").appendTo("#button-group2").text("Home")
+  btnTwo.css("display", "block").appendTo("#button-group2").text("Home").attr("id", "home").text("Home")
   
-  
+  $("#home").on("click", function () {
+    location.reload();
+  });
 
 
 });
