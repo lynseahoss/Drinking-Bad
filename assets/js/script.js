@@ -41,19 +41,19 @@ $("#btn-one").on("click", function () {
     $("#image").css("display", "none");
     $("#dare-btn").css("display", "none");
 
-    $("<div>")
-      .addClass("ui centered segment")
-      .attr("id", "segment-div")
-      .appendTo("#container");
-      $("<div>")
-      .attr("id", "image-group")
-      .appendTo("#segment-div");
-      $("<img>")
-      .addClass("ui centered small image")
-      .attr("src", "https://st4.depositphotos.com/5249193/22833/v/1600/depositphotos_228336628-stock-illustration-beautiful-girl-drinking-champagne-illustration.jpg")
-      .appendTo("#image-group");
-      $("<p>").text("API DRINK INFO HERE")
-      .appendTo("#segment-div")
+    $("<div>").addClass("ui centered card").attr("id", "ui-card").appendTo("#container");
+      $("<div>").addClass("image").attr("id", "shape-image").appendTo("#ui-card");
+      $("<img>").addClass("ui image").attr("src", "https://st4.depositphotos.com/5249193/22833/v/1600/depositphotos_228336628-stock-illustration-beautiful-girl-drinking-champagne-illustration.jpg").appendTo("#ui-card");
+      $("<div>").addClass("content").appendTo("ui-card");
+      $("<div>").addClass("header").text("Drink Name Here").appendTo("#ui-card");
+      $("<div>").addClass("description").text("Drink Ingredients Here").appendTo("#ui-card");
+      $("<div>").addClass("description").text("Mixing Instructions Here").appendTo("#ui-card");
+      
+      //btnTwo.css("display", "block").appendTo("#button-group2").text("Home").attr("id", "home").text("Home")
+      
+      // $("#home").on("click", function () {
+      //   location.reload();
+      // });
     })
 
   $("#dare-btn").on("click", function () {
