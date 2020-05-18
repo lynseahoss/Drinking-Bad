@@ -160,12 +160,12 @@ function pickYourPoison() {
     .attr("id", "dare-btn")
     .text("Click if You Dare")
     .appendTo("#button-group");
-  $("#btn-two").css("display", "none");
-  $("<button>")
-    .addClass("ui inverted violet button centered")
-    .attr("id", "lucky")
-    .text("Feelin' lucky?")
-    .appendTo("#button-group");
+  $("#btn-two").addClass("ui inverted violet button centered")
+  .attr("id", "lucky")
+  .text("Feelin' lucky?")
+  .appendTo("#button-group");
+ 
+ 
 
   $("#lucky").on("click", function () {
     feelingLucky();
@@ -239,10 +239,15 @@ function pickYourPoison() {
 }
 
 $("#menu-pyp").on("click", function() {
+  console.log("sad panda");
   pickYourPoison();
 }) 
 
 $("#btn-one").on("click", function () {
+ 
   pickYourPoison();
   
+});
+$("#menu-home").on("click", function () {
+  location.reload();
 });
