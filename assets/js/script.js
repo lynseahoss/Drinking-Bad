@@ -187,19 +187,81 @@ function pickYourPoison() {
       .attr("id", "drink-div2")
       .appendTo("#drink-div");
 
-    for (var i = 0; i < 6; i++) {
+   
       $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12528",
         method: "GET",
       }).then(function (response) {
         randomDrinks.push(response.drinks[0].idDrink);
         $("<img>")
-          .attr("data-name", response.drinks[0].idDrink)
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 1)
           .attr("src", response.drinks[0].strDrinkThumb)
           .addClass("drink-btn")
           .appendTo("#drink-div2");
       });
-    }
+
+      $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17194",
+        method: "GET",
+      }).then(function (response) {
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>")
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 3)
+          .attr("src", response.drinks[0].strDrinkThumb)
+          .addClass("drink-btn")
+          .appendTo("#drink-div2");
+      });
+      $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12101",
+        method: "GET",
+      }).then(function (response) {
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>")
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 5)
+          .attr("src", response.drinks[0].strDrinkThumb)
+          .addClass("drink-btn")
+          .appendTo("#drink-div2");
+      });
+      $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17180",
+        method: "GET",
+      }).then(function (response) {
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>")
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 6)
+          .attr("src", response.drinks[0].strDrinkThumb)
+          .addClass("drink-btn")
+          .appendTo("#drink-div2");
+      });
+      $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17225",
+        method: "GET",
+      }).then(function (response) {
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>")
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 2)
+          .attr("src", response.drinks[0].strDrinkThumb)
+          .addClass("drink-btn")
+          .appendTo("#drink-div2");
+      });
+      $.ajax({
+        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=15082",
+        method: "GET",
+      }).then(function (response) {
+        randomDrinks.push(response.drinks[0].idDrink);
+        $("<img>")
+          .attr("data-drink", response.drinks[0].idDrink)
+          .attr("data-char", 8)
+          .attr("src", response.drinks[0].strDrinkThumb)
+          .addClass("drink-btn")
+          .appendTo("#drink-div2");
+      });
+    
   });
 }
 
