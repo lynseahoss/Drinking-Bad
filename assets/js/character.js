@@ -2,12 +2,12 @@
 var charID = "";
 var drinkID = "";
 var charInfo = {
-    1: "Walter White was an only child. Walt's father died of Huntington's disease when he was six years old. He studied chemistry at the California Institute of Technology, where he conducted research on proton radiography that helped a team win a Nobel Prize in Chemistry in 1985",
-    2: "",
-    3: "",
-    5: "",
-    6: "",
-    8: "",
+    1: "Walter White was a high school Chemistry teacher, which never suited him. He was meant for bigger and better things. He went to the California Institute of Technology. Awesome fact about Walter, he was part of a team that studied radiography which won a Nobel Prize for the reseach conducted. He then went on to cofound Gray Matter Technologies with a former classmate Elliot Schwartz. Schwartz bought Walter out for $5k and Gray Matter Technology made a huge fortune.  That plus the cancer he is diagnosed with may have played a huge factor in him becoming Heisenberg.",
+    2: "Jesse Pickman comes from an upper middle class family. During high school Jesse preferred hangingout with friends and smoking rather than studying. He was a student of Walter's but was never motivated to do well in school. In turn Jesse becomes Walter's protege and makes the same quality Meth by following Walter's lead.",
+    3: "Skyler White was a bookkeeper at Beneke Fabricators. She had a quick fling with her boss when she found out Walter was Hiesenberg but quickly ended the fling. She so badly wants to be the proper house wife but her Bad side begins to show over a period of time.",
+    5: "Henry Schrader is the DEA agent that never stops. He is desperate to bring down the king pin Heisneberg and is always one step behind Walter until the very last season. He's that fly that never can be killed.",
+    6: "Marie Schrader is Skyler White's younger sister. She is a cleptomanic and has an obession with the color purple and healing crystals. She acts naive and is in denial but we all know she has an idea of what her sister and Walter are really doing other than washing cars.",
+    8: "Saul Goodman is that lawyer you call when you want quick money fast. He has the connections and experience to launder money, take down enemies and still have a smile on his face. He's the guy you wnat in your corner if you are a drug lord or a basic criminal. He's driven by money and is great at denying knowing anything to save his own neck.",
 }
 var reasonInfo = {
     1: "Reason why you would be character based off drink selection. ie Walter White lives a simple life but has a desire to take on the responsibility of providing for his family's future. The White Russian is a simple yet complicated drink which matches well with Walter White.",

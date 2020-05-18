@@ -160,12 +160,12 @@ function pickYourPoison() {
     .attr("id", "dare-btn")
     .text("Click if You Dare")
     .appendTo("#button-group");
-  $("#btn-two").css("display", "none");
-  $("<button>")
-    .addClass("ui inverted violet button centered")
-    .attr("id", "lucky")
-    .text("Feelin' lucky?")
-    .appendTo("#button-group");
+  $("#btn-two").addClass("ui inverted violet button centered")
+  .attr("id", "lucky")
+  .text("Feelin' lucky?")
+  .appendTo("#button-group");
+ 
+ 
 
   $("#lucky").on("click", function () {
     feelingLucky();
@@ -187,153 +187,67 @@ function pickYourPoison() {
       .attr("id", "drink-div2")
       .appendTo("#drink-div");
 
-   
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12528",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 1)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
-
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17194",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 3)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=12101",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 5)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17180",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 6)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=17225",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 2)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
-      $.ajax({
-        url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=15082",
-        method: "GET",
-      }).then(function (response) {
-        randomDrinks.push(response.drinks[0].idDrink);
-        $("<img>")
-          .attr("data-drink", response.drinks[0].idDrink)
-          .attr("data-char", 8)
-          .attr("src", response.drinks[0].strDrinkThumb)
-          .addClass("drink-btn")
-          .appendTo("#drink-div2");
-      });
+      var sixButtonArray = [
+        {
+          drinkId: "12528",
+          charId: 1
+         },
     
+         {
+           drinkId: "17194",
+           charId: 3
+         },
+         {
+           drinkId: "12101",
+           charId: 5
+         },
+         {
+           drinkId: "17180",
+           charId: 6
+         },
+         {
+           drinkId: "17225",
+           charId: 2
+         },
+         {
+           drinkId: "15082",
+           charId: 8
+         },
+      ]
+    
+         for (var i = 0; i < sixButtonArray.length; i++) {
+           var newDrinkID = sixButtonArray[i].drinkId;
+           console.log(sixButtonArray[i].drinkId);
+           var newCharID = sixButtonArray[i].charId;
+           console.log(sixButtonArray[i].charId)
+    
+           $.ajax({
+             url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+ newDrinkID,
+             method: "GET",
+           }).then(function (response) {
+             randomDrinks.push(response.drinks[0].idDrink);
+             $("<img>")
+               .attr("data-drink", response.drinks[0].idDrink)
+               .attr("data-char", newCharID)
+               .attr("src", response.drinks[0].strDrinkThumb)
+               .addClass("drink-btn")
+               .appendTo("#drink-div2");
+         })
+         }
+
   });
 }
 
 $("#menu-pyp").on("click", function() {
+  console.log("sad panda");
   pickYourPoison();
 }) 
 
 $("#btn-one").on("click", function () {
+ 
   pickYourPoison();
   
 });
-
-
-// $.ajax({
-//   url: "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic",
-//   method: "GET",
-// }).then(function (response) {
-//   for (var i = 0; i < 6; i++) {
-//     $("<img>")
-//       .attr("src", response.drinks[i].strDrinkThumb)
-//       .appendTo("#drink-div2");
-//   }
-// });
-
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div2")
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div2")
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div2")
-// $("<div>").addClass("ui container centered").attr("id", "drink-div1").appendTo("#container")
-// $("<div>").addClass("ui small images").attr("id", "drink-div3").appendTo("#drink-div1")
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div3")
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div3")
-// $("<img>").attr("src", "assets/image/bbNo.jpg").appendTo("#drink-div3")
-// });
-
-//  // Creates AJAX call for random Breaking Bad
-//  $.ajax({
-//     url: "https://www.breakingbadapi.com/api/character/random",
-//     method: "GET"
-//   }).then(function(response) {
-//       console.log(response)
-
-//       //Breaking Bad Character Name
-//       console.log(response[0].name)
-//      // breaking Bad Character Nickname
-//       console.log(response[0].nickname)
-//       // Breaking Bad character image
-//       console.log(response[0].img)
-//       //Breaking Bad actor name
-//       console.log(response[0].portrayed)
-//       //Breaking Bad Alive or dead
-//       console.log(response[0].status)
-
-//   });
-
-//   // Creates AJAX call for random Drink API
-// $.ajax({
-//    url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
-//    method: "GET"
-//  }).then(function(response) {
-
-//  }
-//        console.log(response)
-
-//       //Drink Name
-//        console.log(response.drinks[0].strDrink)
-//       // Drink Instructions
-//        console.log(response.drinks[0].strInstructions)
-//        // Drink image
-//        console.log(response.drinks[0].strDrinkThumb)
-//        //Drink first ingredient
-//        console.log(response.drinks[0].strIngredient1)
-//        //Drink glass type
-//          console.log(response.drinks[0].strGlass)
-
-//    });
+$("#menu-home").on("click", function () {
+  location.reload();
+});
