@@ -1,0 +1,15 @@
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #D87DFF;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#menu-bar {
+  margin: 0 auto;
+  background-color: #FF69B4;
+}
