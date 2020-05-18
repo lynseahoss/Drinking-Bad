@@ -20,41 +20,126 @@ $("#btn-two").on("click", function () {
   });
 });
 
+// Runs a random drink Feeling Lucky page
+function feelingLucky() {
+
+  $(".content").css("display", "none");
+  $("#pop-up").css("display", "none");
+  $("#image").css("display", "none");
+  $("#dare-btn").css("display", "none");
+
+  $("<div>").addClass("ui centered card").attr("id", "ui-card").appendTo("#container");
+  $("<div>").addClass("image").attr("id", "shape-image").appendTo("#ui-card");
+
+  // Creates AJAX call for random Drink API
+  $.ajax({
+    url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+
+    // Drink image
+    console.log(response.drinks[0].strDrinkThumb);
+    $("<img>").addClass("ui image").attr("src", "" + response.drinks[0].strDrinkThumb + "").appendTo("#ui-card");
+
+    $("<div>").addClass("content").appendTo("ui-card");
+
+    //Drink Name
+    var drinkName = response.drinks[0].strDrink;
+    console.log(response.drinks[0].strDrink);
+    $("<div>").addClass("ui centered header").text(drinkName).appendTo("#ui-card");
+
+    //Drink first ingredient
+    var drinkIngredient = [];
+    if (response.drinks[0].strIngredient1) {
+      drinkIngredient.push(response.drinks[0].strIngredient1)
+    };
+    if (response.drinks[0].strIngredient2) {
+      drinkIngredient.push(response.drinks[0].strIngredient2)
+    };
+    if (response.drinks[0].strIngredient3) {
+      drinkIngredient.push(response.drinks[0].strIngredient3)
+    };
+    if (response.drinks[0].strIngredient4) {
+      drinkIngredient.push(response.drinks[0].strIngredient4)
+    };
+    if (response.drinks[0].strIngredient5) {
+      drinkIngredient.push(response.drinks[0].strIngredient5)
+    };
+    if (response.drinks[0].strIngredient6) {
+      drinkIngredient.push(response.drinks[0].strIngredient6)
+    };
+    if (response.drinks[0].strIngredient7) {
+      drinkIngredient.push(response.drinks[0].strIngredient7)
+    };
+    if (response.drinks[0].strIngredient8) {
+      drinkIngredient.push(response.drinks[0].strIngredient8)
+    };
+    if (response.drinks[0].strIngredient9) {
+      drinkIngredient.push(response.drinks[0].strIngredient9)
+    };
+    console.log(drinkIngredient);
+
+    // This for loop did not work for pulling the drink ingredients from the API
+    // for (i = 1; i < 16; i++) {
+    //   if (response.drinks[0].strIngredient[i]) {
+    //     drinkIngredient = drinkIngredient.push(response.drinks[0].strIngredient[i]);
+    //   };
+
+    // Need to set this to an unordered list for drink ingredients
+    $("<h3>").addClass("ui header").text("Recipe:").appendTo("#ui-card");
+    $("<ul>").addClass("ui centered list").attr("id", "ingList").appendTo("#ui-card");
+
+    for (i = 0; i < drinkIngredient.length; i++) {
+      $("<li>").text(drinkIngredient[i]).appendTo("#ingList")
+    }
+
+    // Drink Instructions
+    console.log(response.drinks[0].strInstructions);
+    $("<div>").addClass("description").text(response.drinks[0].strInstructions).appendTo("#ui-card");
+
+    $("<div>").attr("id", "button-group1").addClass("ui two bottom attached buttons").appendTo("#ui-card")
+
+    // Tread lightly button
+    btnOne.css("display", "block").appendTo("#button-group1").text("Tread Lightly").attr("id", "tread-lightly")
+    $("#tread-lightly").on("click", function () {
+      // Repeats the feel lucky random drink function
+      repeatFeelLucky();
+    });
+
+    // Home Button
+    btnTwo.css("display", "block").appendTo("#button-group1").text("Home").attr("id", "home")
+    $("#home").on("click", function () {
+      // 
+      location.reload();
+    });
+  });
+}
+
+function repeatFeelLucky() {
+  $("#container").empty();
+  feelingLucky();
+}
+
 $("#btn-one").on("click", function () {
   $("#question").text("Pick Your Poison");
   $("#image").attr("src", "assets/image/mask.jpg");
   $("#card-bodytext").text("TO SEE HOW BAD YOU ARE...");
   $("#btn-one").addClass("ui inverted pink button centered")
-  .attr("id", "dare-btn")
-  .text("Click if You Dare")
-  .appendTo("#button-group");
+    .attr("id", "dare-btn")
+    .text("Click if You Dare")
+    .appendTo("#button-group");
   $("#btn-two").css("display", "none")
   $("<button>")
     .addClass("ui inverted violet button centered")
     .attr("id", "lucky")
     .text("Feelin' lucky?")
     .appendTo("#button-group")
-  
-  $("#lucky").on("click", function () {
-    $(".content").css("display", "none");
-    $("#pop-up").css("display", "none");
-    $("#image").css("display", "none");
-    $("#dare-btn").css("display", "none");
 
-    $("<div>").addClass("ui centered card").attr("id", "ui-card").appendTo("#container");
-      $("<div>").addClass("image").attr("id", "shape-image").appendTo("#ui-card");
-      $("<img>").addClass("ui image").attr("src", "https://st4.depositphotos.com/5249193/22833/v/1600/depositphotos_228336628-stock-illustration-beautiful-girl-drinking-champagne-illustration.jpg").appendTo("#ui-card");
-      $("<div>").addClass("content").appendTo("ui-card");
-      $("<div>").addClass("header").text("Drink Name Here").appendTo("#ui-card");
-      $("<div>").addClass("description").text("Drink Ingredients Here").appendTo("#ui-card");
-      $("<div>").addClass("description").text("Mixing Instructions Here").appendTo("#ui-card");
-      
-      //btnTwo.css("display", "block").appendTo("#button-group2").text("Home").attr("id", "home").text("Home")
-      
-      // $("#home").on("click", function () {
-      //   location.reload();
-      // });
-    })
+  $("#lucky").on("click", function () {
+    feelingLucky();
+
+  });
 
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
@@ -93,12 +178,11 @@ $(document).on("click", ".drink-btn", function characterSelect() {
   $("<p>").text("pi Character Info here: Walter White was an only child. Walt's father died of Huntington's disease when he was six years old. He studied chemistry at the California Institute of Technology, where he conducted research on proton radiography that helped a team win a Nobel Prize in Chemistry in 1985").appendTo("#character-card")
   $("<p>").text("ADrink API: White Russian:Ingredients 1-1/2 ounces vodka, 1-1/2 ounces Kahlua, 3 ounces heavy whipping cream or milk. Directions: Place ice in a rocks glass. Add vodka and Kahlua; top with cream.").appendTo("#character-card")
   $("<p>").text("Reason why you would be character based off drink selection. ie Walter White lives a simple life but has a desire to take on the responsibility of providing for his family's future. The White Russian is a simple yet complicated drink which matches well with Walter White. ").appendTo("#character-card")
-  $("<img>").addClass("ui small left floated image").attr("src", "https://f1.pngfuel.com/png/905/307/702/retro-pop-art-vintage-white-russian-black-russian-irish-cream-cocktail-garnish-rum-and-coke-png-clip-art.png").appendTo("#character-card");
   $("<br>").appendTo("#character-card")
   $("<div>").attr("id", "button-group2").addClass("ui two bottom attached buttons").appendTo("#container")
   btnOne.css("display", "block").appendTo("#button-group2").text("Try Again")
   btnTwo.css("display", "block").appendTo("#button-group2").text("Home").attr("id", "home").text("Home")
-  
+
   $("#home").on("click", function () {
     location.reload();
   });
