@@ -21,7 +21,7 @@ $("#btn-two").on("click", function () {
 });
 
 // Runs a random drink Feeling Lucky page
-function feelingLucky(){
+function feelingLucky() {
 
   $(".content").css("display", "none");
   $("#pop-up").css("display", "none");
@@ -97,19 +97,26 @@ function feelingLucky(){
     // Drink Instructions
     console.log(response.drinks[0].strInstructions);
     $("<div>").addClass("description").text(response.drinks[0].strInstructions).appendTo("#ui-card");
+
     $("<div>").attr("id", "button-group1").addClass("ui two bottom attached buttons").appendTo("#ui-card")
-    btnTwo.css("display", "block").appendTo("#button-group1").text("Home").attr("id", "home").text("Home")
-    $("#home").on("click", function () {
-      // 
+
+    // Tread lightly button
+    btnOne.css("display", "block").appendTo("#button-group1").text("Tread Lightly").attr("id", "tread-lightly")
+    $("#tread-lightly").on("click", function () {
+      // Repeats the feel lucky random drink function
       repeatFeelLucky();
     });
 
-    // Try again button
-    // feelingLucky();
+    // Home Button
+    btnTwo.css("display", "block").appendTo("#button-group1").text("Home").attr("id", "home")
+    $("#home").on("click", function () {
+      // 
+      location.reload();
+    });
   });
 }
 
-function repeatFeelLucky(){
+function repeatFeelLucky() {
   $("#container").empty();
   feelingLucky();
 }
