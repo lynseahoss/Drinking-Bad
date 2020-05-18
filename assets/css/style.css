@@ -18,6 +18,9 @@ body {
   margin: 0 auto;
   background-color: #FF69B4;
 }
+#container {
+  margin-top: 75px;
+}
 
 #test canvas {
   display: block;
