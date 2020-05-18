@@ -176,7 +176,7 @@ function pickYourPoison() {
     $("#pop-up").css("display", "none");
     $("#image").css("display", "none");
     $("#dare-btn").css("display", "none");
-    $(".content").text("Click a drink to reveal your Drinking Bad Partner");
+    $("<h2>").addClass("ui centered header").attr("id", "drink-partner").text("Click a drink to reveal your Drinking Bad Partner").appendTo("#container");
 
     $("<div>")
       .addClass("ui container centered")

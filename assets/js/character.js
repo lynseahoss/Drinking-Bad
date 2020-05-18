@@ -11,11 +11,11 @@ var charInfo = {
 }
 var reasonInfo = {
     1: "Reason why you would be character based off drink selection. ie Walter White lives a simple life but has a desire to take on the responsibility of providing for his family's future. The White Russian is a simple yet complicated drink which matches well with Walter White.",
-    2: "",
+    2: "Jesse Pinkman is an Ace because he doesn't seem to be such an important player but ends up being the ace in the hole for Walter.",
     3: "Skyler White is a White Lady because she is sweet yet sour, similar to the triple sec, lemon juice and gin.",
-    5: "",
+    5: "Henry Schrader is a Rusty Nail because hes one of those characters that seem to pop up at unexpected times. Be careful you don't want to get caught up.",
     6: "Marie Schrader is an Aviation because she wears purple throughout the series. She believes it represents royalty, luxury and safety from the meth trade (purple is opposite of yellow).",
-    8: "",
+    8: "If you're in a jam and want a royal flush Saul is your good man.",
 }
 
 $(document).on("click", ".drink-btn", function characterSelect() {
@@ -47,11 +47,14 @@ $(document).on("click", ".drink-btn", function characterSelect() {
         }).then(function (response) {
             // Character Name
             var charName = response[0].name;
-            $("<h1>").attr("id", "characterHeader").addClass("ui header centered").text("You are " + charName).appendTo("#container");
+            $("<h1>").attr("id", "characterHeader").addClass("ui header centered").text("Drinking Partner").appendTo("#container");
+            // $("<h1>").attr("id", "characterHeader").addClass("ui header centered").text("You are " + charName).appendTo("#container");
             $("<div>").addClass("ui segment").attr("id", "character-card").appendTo("#container")
+            $("<h2>").addClass("ui centered header").text(charName).appendTo("#character-card");
+            
             // Character Image
             var charImg = response[0].img;
-            $("<img>").addClass("ui small left floated image").attr("src", charImg).appendTo("#character-card");
+            $("<img>").addClass("ui small centered image").attr("src", charImg, "id", "img-here").appendTo("#character-card");
             // Character Info
             var newCharInfo = $("<p>").text(charInfo[charID])
             console.log(newCharInfo)
@@ -72,7 +75,8 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             //Drink Name
             // var drinkName = response.drinks[0].strDrink;
             console.log(drinkID);
-            $("<h2>").addClass("ui header").text(response.drinks[0].strDrink).appendTo("#character-card");
+            $("#drink-partner").css("display", "none");
+            $("<h3>").addClass("ui header").text(response.drinks[0].strDrink).appendTo("#character-card");
 
             //Drink first ingredient
             var drinkIngredient = [];
@@ -103,9 +107,10 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             if (response.drinks[0].strIngredient9) {
                 drinkIngredient.push(response.drinks[0].strIngredient9)
             };
-
+            
+            
             // Need to set this to an unordered list for drink ingredients
-            $("<h3>").addClass("ui header").text("Recipe:").appendTo("#character-card");
+            $("<h4>").addClass("ui header").text("Recipe:").appendTo("#character-card");
             $("<ul>").addClass("ui list").attr("id", "ingList2").appendTo("#character-card");
 
             // Loop to create list item for each existing ingredient
@@ -117,6 +122,7 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             $("<div>").addClass("description").text(response.drinks[0].strInstructions).appendTo("#character-card");
 
             // Reason character and drink match
+            $("<h4>").addClass("ui header").text("Relations:").appendTo("#character-card");
             $("<p>").text(reasonInfo[charID]).appendTo("#character-card");
 
             $("<br>").appendTo("#character-card");
