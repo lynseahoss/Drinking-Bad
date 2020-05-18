@@ -5,12 +5,12 @@ var btnTwo = $("#btn-two")
 
 $("#btn-two").on("click", function () {
   $("#question").text("Ha, You're not Bad Enough");
-  $("#image").attr("src", "assets/image/bbNo.jpg");
+  $("#image").attr("src", "https://mymodernmet.com/wp/wp-content/uploads/archive/g2N0gPE1T38I8UkzEuKw_1082103608.jpeg");
   $("#card-bodytext").text("");
   $("#btn-one").css("display", "none");
   $("#btn-two").css("display", "none");
   $("<button>")
-    .addClass("ui inverted red button centered")
+    .addClass("ui inverted purple button centered")
     .attr("id", "home")
     .text("Home")
     .appendTo("#button-group");
