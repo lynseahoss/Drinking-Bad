@@ -81,14 +81,14 @@ APIs
 ## Team Coordination
 Our team objective was to create a simple application that was entertaining to the user. As we began, we tried to divide the work in consideration of each members strengths and weaknesses. Lindsey and Samantha tackled selecting and learning the new CSS Framework for the project. Ashley and Heather were assigned to handle the Javascript and API tasks. To establish communication, we decided to perform daily stand-ups at least one per day and use Slack as an open communication channel between team members. To facilitate project task management, we chose to use the GitHub project tab's built in kanban feature to allow each member to freely create task items which could be claimed and tracked throughout the project.
 
-### MVP - Minimum Viable Product
+## MVP - Minimum Viable Product
 The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
 
 Welcome page
 - Asks the user whether or not they are 21
 - Has an image topper
 - Has a no button that trigger the "Too Bad" page
-- Has a yess button that triggers the "Pick Your Poison" page
+- Has a yes button that triggers the "Pick Your Poison" page
 
 Too Bad Page
 - Funny pic for image topper
@@ -112,7 +112,9 @@ Character Page
 
 ## Project Diagram
 
-![Drinkin' Bad Project Diagram](assets/image/Drinkin_Bad_Project.PNG)*Diagram of user experience flow for Drinkin' Bad Project*
+![Drinkin' Bad Project Diagram](assets/image/Drinkin_Bad_Project.PNG)
+
+*Diagram of user experience flow for Drinkin' Bad Project*
 
 ## Project Lessons
 
