@@ -15,15 +15,15 @@ $("#btn-two").on("click", function () {
   $("#card-bodytext").text("");
   $("#btn-one").css("display", "none");
   $("#btn-two").css("display", "none");
-  $("<button>")
-    .addClass("ui inverted purple button centered")
-    .attr("id", "home")
-    .text("Home")
-    .appendTo("#button-group");
+  // $("<button>")
+  //   .addClass("ui inverted purple button centered")
+  //   .attr("id", "home")
+  //   .text("Home")
+  //   .appendTo("#button-group");
 
-  $("#home").on("click", function () {
-    location.reload();
-  });
+  // $("#home").on("click", function () {
+  //   location.reload();
+  // });
 });
 
 // Runs a random drink Feeling Lucky page
@@ -134,16 +134,16 @@ function feelingLucky() {
       repeatFeelLucky();
     });
 
-    // Home Button
-    btnTwo
-      .css("display", "block")
-      .appendTo("#button-group1")
-      .text("Home")
-      .attr("id", "home2");
-    $("#home2").on("click", function () {
-      //
-      location.reload();
-    });
+    // // Home Button
+    // btnTwo
+    //   .css("display", "block")
+    //   .appendTo("#button-group1")
+    //   .text("Home")
+    //   .attr("id", "home2");
+    // $("#home2").on("click", function () {
+    //   //
+    //   location.reload();
+    // });
   });
 }
 
