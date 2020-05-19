@@ -10,7 +10,7 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
 
   [Drinkin' Bad](https://hlsorrells.github.io/Drinking-Bad/)
 
-  ![](assets/images/drinkin-bad.gif)
+  ![](assets/image/drinkin-bad.gif)
 
 ## Table of Contents
 
