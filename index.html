@@ -1,85 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
-    />
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- tab icon link -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="https://www.denofgeek.com/wp-content/uploads/2013/07/288895.jpg?resize=636%2C432"
-    />
-    <title>Drinkin' Bad</title>
-    
-  </head>
-  <body  >
-    <div id="test"></div>
-    <div id= "menu-bar" class="ui three item inverted menu fixed">
-      <a class="item" id="menu-home" >
-        Home
-      </a>
-      <div class="item" id="menu-pyp" ><strong>Drinkin' Bad</strong>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- tab icon link -->
+  <link rel="shortcut icon" type="image/png"
+    href="https://www.denofgeek.com/wp-content/uploads/2013/07/288895.jpg?resize=636%2C432" />
+  <title>Drinkin' Bad</title>
+</head>
+
+<body>
+  <div id="test"></div>
+  <!-- Menu bar -->
+  <div id="menu-bar" class="ui three item inverted menu fixed">
+    <a class="item" id="menu-home">Home</a>
+    <div class="item" id="menu-pyp"><strong>Drinkin' Bad</strong></div>
+    <a class="item" id="menu-quote">Bad Quotes</a>
+  </div>
+  <!-- 1st Container when page is loaded -->
+  <div id="container" class="ui raised very padded text container segment" id="particles-js">
+    <!-- 1st Popup when page is loaded -->
+    <div id="pop-up" class="ui card centered"
+      data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>">
+      <div class="image">
+        <img id="image" src="assets/image/Screen Shot 2020-05-14 at 8.01.25 PM.png" />
       </div>
-      
-      <a class="item" id="menu-quote">
-       Bad Quotes 
-      </a>
-    </div>
-    
-    <!-- 1st Container when page is loaded -->
-    <div id="container" class="ui raised very padded text container segment" id="particles-js">
-      <!-- 1st Popup when page is loaded -->
-      <div
-        id = "pop-up" class="ui card centered"
-        data-html="<div class='header'>User Rating</div><div class='content'><div class='ui star rating'><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i><i class='active icon'></i></div></div>"
-      >
-        <div class="image">
-          <img
-            id="image"
-            src="assets/image/Screen Shot 2020-05-14 at 8.01.25 PM.png"
-          />
-        </div>
-        <div class="content">
-          <div id="question" class="ui header centered">Are you 21?</div>
-          <div id="card-bodytext" class="ui centered description">
-            Get your drink on with Heisenberg
-          </div>
-        </div>
-        <div id="button-group" class="ui two bottom attached buttons">
-          <button id="btn-one" class="ui inverted pink button">Yes</button>
-          <button id="btn-two" class="ui inverted purple button">No</button>
+      <div class="content">
+        <div id="question" class="ui header centered">Are you 21?</div>
+        <div id="card-bodytext" class="ui centered description">
+          Get your drink on with Heisenberg
         </div>
       </div>
+      <div id="button-group" class="ui two bottom attached buttons">
+        <button id="btn-one" class="ui inverted pink button">Yes</button>
+        <button id="btn-two" class="ui inverted purple button">No</button>
+      </div>
     </div>
-    
-    <!-- jquery cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- semantic cdn  -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
+  </div>
+  <!-- jquery cdn  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- semantic cdn  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <!-- particle cdn -->
+  <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
+  <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
 
-    <!-- particle cdn -->
-    <script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436720/particles.js"></script>
-<script src="https://res.cloudinary.com/dxfq3iotg/raw/upload/v1561436735/app.js"></script>
-    <!-- The js in the code is meant to flip the popup or image- need to read up on it.
-        <script>
-    $('.green.leaf')
-  .transition('horizontal flip', '500ms')
-  .transition('horizontal flip', 500, function() {
-    alert('done!');
-  })
-;
-    </script> -->
-    <script src= "./assets/js/particle.js"></script>
-    <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/character.js"></script>
-    <script src="./assets/js/quote.js"></script>
-  </body>
+  </script>
+  <script src="./assets/js/particle.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/character.js"></script>
+  <script src="./assets/js/quote.js"></script>
+</body>
+
 </html>

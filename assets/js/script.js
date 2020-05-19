@@ -1,10 +1,7 @@
-//this fixed it
 var randomDrinks = [];
 var newCharID = ""
 var btnOne = $("#btn-one");
 var btnTwo = $("#btn-two");
-
-
 
 $("#btn-two").on("click", function () {
   $("#question").text("Ha, You're not Bad Enough");
@@ -15,15 +12,7 @@ $("#btn-two").on("click", function () {
   $("#card-bodytext").text("");
   $("#btn-one").css("display", "none");
   $("#btn-two").css("display", "none");
-  // $("<button>")
-  //   .addClass("ui inverted purple button centered")
-  //   .attr("id", "home")
-  //   .text("Home")
-  //   .appendTo("#button-group");
 
-  // $("#home").on("click", function () {
-  //   location.reload();
-  // });
 });
 
 // Runs a random drink Feeling Lucky page
@@ -44,20 +33,15 @@ function feelingLucky() {
     url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
     method: "GET",
   }).then(function (response) {
-    console.log(response);
-
-    // Drink image
-    console.log(response.drinks[0].strDrinkThumb);
+   // Drink image
     $("<img>")
       .addClass("ui image")
       .attr("src", "" + response.drinks[0].strDrinkThumb + "")
       .appendTo("#ui-card");
-
     $("<div>").addClass("content").appendTo("ui-card");
 
     //Drink Name
     var drinkName = response.drinks[0].strDrink;
-    console.log(response.drinks[0].strDrink);
     $("<div>")
       .addClass("ui centered header")
       .text(drinkName)
@@ -92,13 +76,6 @@ function feelingLucky() {
     if (response.drinks[0].strIngredient9) {
       drinkIngredient.push(response.drinks[0].strIngredient9);
     }
-    console.log(drinkIngredient);
-
-    // This for loop did not work for pulling the drink ingredients from the API
-    // for (i = 1; i < 16; i++) {
-    //   if (response.drinks[0].strIngredient[i]) {
-    //     drinkIngredient = drinkIngredient.push(response.drinks[0].strIngredient[i]);
-    //   };
 
     // Need to set this to an unordered list for drink ingredients
     $("<h3>").addClass("ui header").text("Recipe:").appendTo("#ui-card");
@@ -112,7 +89,6 @@ function feelingLucky() {
     }
 
     // Drink Instructions
-    console.log(response.drinks[0].strInstructions);
     $("<div>")
       .addClass("description")
       .text(response.drinks[0].strInstructions)
@@ -133,17 +109,6 @@ function feelingLucky() {
       // Repeats the feel lucky random drink function
       repeatFeelLucky();
     });
-
-    // // Home Button
-    // btnTwo
-    //   .css("display", "block")
-    //   .appendTo("#button-group1")
-    //   .text("Home")
-    //   .attr("id", "home2");
-    // $("#home2").on("click", function () {
-    //   //
-    //   location.reload();
-    // });
   });
 }
 
@@ -151,10 +116,11 @@ function repeatFeelLucky() {
   $("#container").empty();
   feelingLucky();
 }
-function repeatPickYourPoison(){
+function repeatPickYourPoison() {
   $("#container").empty();
   pickYourPoison()
 }
+//Creating Pick Your Poison card
 function pickYourPoison() {
   $("#question").text("Pick Your Poison");
   $("#image").attr("src", "assets/image/mask.jpg");
@@ -169,19 +135,18 @@ function pickYourPoison() {
     .attr("id", "lucky")
     .text("Feelin' lucky?")
     .appendTo("#button-group");
-   
 
   $("#lucky").on("click", function () {
     feelingLucky();
   });
 
-
+  //Drinking Partner choices and user choice
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
     $("#pop-up").css("display", "none");
     $("#image").css("display", "none");
     $("#dare-btn").css("display", "none");
-    $("<h2>").addClass("ui centered header").attr("id", "drink-partner").text("Click a drink to reveal your Drinking Bad Partner").appendTo("#container");
+    $("<h2>").addClass("ui centered header").attr("id", "drink-partner").text("Click a drink to reveal your Drinkin' Bad Partner").appendTo("#container");
 
     $("<div>")
       .addClass("ui container centered")
@@ -222,9 +187,7 @@ function pickYourPoison() {
 
     for (var i = 0; i < sixButtonArray.length; i++) {
       var newDrinkID = sixButtonArray[i].drinkId;
-      console.log(sixButtonArray[i].drinkId);
       newCharID = sixButtonArray[i].charId;
-      console.log(sixButtonArray[i].charId)
       createDrinkTiles(newCharID, newDrinkID)
     }
   });
@@ -236,7 +199,7 @@ function createDrinkTiles(newCharID, newDrinkID) {
     method: "GET",
   }).then(function (response) {
     //  randomDrinks.push(response.drinks[0].idDrink);
-    console.log(newCharID)
+
     $("<img>")
       .attr("data-drink", response.drinks[0].idDrink)
       .attr("data-char", newCharID)
@@ -246,10 +209,8 @@ function createDrinkTiles(newCharID, newDrinkID) {
   });
 };
 
-
-
 $("#menu-pyp").on("click", function () {
-  console.log("sad panda");
+
   repeatPickYourPoison()
 })
 

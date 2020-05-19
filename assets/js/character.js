@@ -19,9 +19,6 @@ var reasonInfo = {
 }
 
 $(document).on("click", ".drink-btn", function characterSelect() {
-    // Troubleshoot for correct character and drink IDs
-    console.log($(this).attr("data-char"))
-    console.log($(this).attr("data-drink"))
     // Empty variables from any previous use
     charID = "";
     drinkID = "";
@@ -37,7 +34,6 @@ $(document).on("click", ".drink-btn", function characterSelect() {
         // Pass the variables to their respective functions
         getCharInfo(charID, drinkID);
     };
-
     // Create dynamic character information
     function getCharInfo(charID, drinkID) {
         // Create AJAX call for Character API
@@ -51,13 +47,12 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             // $("<h1>").attr("id", "characterHeader").addClass("ui header centered").text("You are " + charName).appendTo("#container");
             $("<div>").addClass("ui segment").attr("id", "character-card").appendTo("#container")
             $("<h2>").addClass("ui centered header").text(charName).appendTo("#character-card");
-            
+
             // Character Image
             var charImg = response[0].img;
             $("<img>").addClass("ui small centered image").attr("src", charImg, "id", "img-here").appendTo("#character-card");
             // Character Info
             var newCharInfo = $("<p>").text(charInfo[charID])
-            console.log(newCharInfo)
             $("#character-card").append(newCharInfo)
 
             getDrinkInfo(drinkID);
@@ -71,10 +66,7 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + drinkID + "",
             method: "GET",
         }).then(function (response) {
-            console.log("happy")
-            //Drink Name
-            // var drinkName = response.drinks[0].strDrink;
-            console.log(drinkID);
+
             $("#drink-partner").css("display", "none");
             $("<h3>").addClass("ui header").text(response.drinks[0].strDrink).appendTo("#character-card");
 
@@ -107,8 +99,6 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             if (response.drinks[0].strIngredient9) {
                 drinkIngredient.push(response.drinks[0].strIngredient9)
             };
-            
-            
             // Need to set this to an unordered list for drink ingredients
             $("<h4>").addClass("ui header").text("Recipe:").appendTo("#character-card");
             $("<ul>").addClass("ui list").attr("id", "ingList2").appendTo("#character-card");
@@ -117,22 +107,11 @@ $(document).on("click", ".drink-btn", function characterSelect() {
             for (i = 0; i < drinkIngredient.length; i++) {
                 $("<li>").text(drinkIngredient[i]).appendTo("#ingList2")
             }
-
             // Drink Instructions
             $("<div>").addClass("description").text(response.drinks[0].strInstructions).appendTo("#character-card");
-
             // Reason character and drink match
             $("<h4>").addClass("ui header").text("Relations:").appendTo("#character-card");
             $("<p>").text(reasonInfo[charID]).appendTo("#character-card");
-
-            // $("<br>").appendTo("#character-card");
-            // $("<div>").attr("id", "button-group2").addClass("ui two bottom attached buttons").appendTo("#container");
-            // btnOne.css("display", "block").appendTo("#button-group2").text("Try Again");
-            // btnTwo.css("display", "block").appendTo("#button-group2").text("Home").attr("id", "home").text("Home");
-
-            // $("#home").on("click", function () {
-            //     location.reload();
-            // });
         });
     };
 });
