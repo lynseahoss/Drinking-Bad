@@ -143,24 +143,24 @@ This was the first team project for each of us which meant that we all got a cra
 
 *Screenshot of the home page*
 
-![Pick Your Poison Page Preview](pypPreview.png)
+![Pick Your Poison Page Preview](assets/image/pypPreview.png)
 
 *Screenshot of the Pick Your Poison page*
 
-![Random Drink Page Preview](randomDrink.png)
+![Random Drink Page Preview](assets/image/randomDrink.png)
 
 *Screenshot of the Random Drink page*
 
-![Character Page Preview](drinkingNamePreview.png)
+![Character Page Preview](assets/image/drinkingNamePreview.png)
 
 *Screenshot of the Character and Drink Mashup Page*
 
-![Random Quote Page](quotePreview.png)
+![Random Quote Page](assets/image/quotePreview.png)
 
 *Screenshot of the Random Quote page*
 </details>
 
-## Author
+## Contributing Authors
 
 [Ashley DeYoung](https://github.com/ashleydeyoung)
 
