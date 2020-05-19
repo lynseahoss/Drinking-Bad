@@ -22,6 +22,15 @@ body {
   margin-top: 75px;
 }
 
+#random-quote{
+  text-align: center;
+  margin: 0 5px;
+}
+
+#quote-author{
+  text-align: center;
+}
+
 #test canvas {
   display: block;
   /* vertical-align: bottom; */
