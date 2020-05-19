@@ -8,15 +8,14 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
 
 ## Deployment
 
-  []()
+  [Drinkin' Bad](https://hlsorrells.github.io/Drinking-Bad/)
 
   ![](assets/images/.gif)
 
 ## Table of Contents
 
-  * [Project Instructions](#project-instructions)
-    * [User Story](#user-story)
-    * [Acceptance Criteria](#acceptance-criteria)
+  * [User Story](#user-story)
+  * [Acceptance Criteria](#acceptance-criteria)
   * [Project Technology](#project-technology)
   * [Team Coordination](#team-coordination)
   * [Project Lessons](#project-lessons)
@@ -28,43 +27,36 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
 
 ----
 
-## Assignment Instructions
-
-Create an application 
-
-The complete assignment instructions can be found in the [instruction folder](/instructions). 
-
-
-<details>
-    <summary markdown="span">Click to expand Assignment Instruction Details</summary>
-
-  ### User Story
+  ## User Story
 
     ```
-    AS AN avid fan of Breaking Bad
-    I WANT to get my favorite characters random drink
-    SO THAT I can get a new drink to try while binge watching the show
-
+    AS AN avid fan of Breaking Bad tv show
+    I WANT to get my favorite characters drink
+    SO THAT I can see which character would be my drinking partner
     ```
 
-  ### Acceptance Criteria
+  ## Acceptance Criteria
 
     ```
     GIVEN the user wants to try a new drink while watching the show
-    WHEN the user clicks the button
-    THEN a random Breaking Bad character appears
-    WHEN a random BB character appears 
-    THEN the BB character description is shown
-    WHEN the user clicks the button
+    WHEN the user clicks on the "Yes" button on the home page
+    THEN the "Pick Your Poison" page appears
+    WHEN the user clicks the "Feelin' lucky?" button
     THEN a random drink appears
-    WHEN the random drink appears
-    THEN the instructions for mixing the drink is shown
-
-    GIVEN
-    WHEN
-    THEN
+    WHEN the user clicks on the "Tread Lightly" button
+    THEN a new random drink is generated
+    WHEN the user clicks the "Drink if You Dare" button
+    THEN a grouping of drink buttons appear
+    WHEN the user clicks on a drink button
+    THEN a character mashup page is loaded
+    WHEN the user clicks on the "No" button on the home page
+    THEN a "Not Bad Enough" page loads
+    WHEN the user clicks on the "Bad Quotes" button in the menu bar
+    THEN a random quote from the BB show is generated
+    WHEN the user clicks on the "Home" button in the menu bar
+    THEN the home page is refreshed for the user to start over
     ```
-</details>
+
 ----
 
 ## Project Technology
@@ -84,8 +76,6 @@ APIs
 
 ## Team Coordination
 Our team objective was to create a simple application that was entertaining to the user. As we began, we tried to divide the work in consideration of each members strengths and weaknesses. Lindsey and Samantha tackled selecting and learning the new CSS Framework for the project. Ashley and Heather were assigned to handle the Javascript and API tasks. To establish communication, we decided to perform daily stand-ups at least one per day and use Slack as an open communication channel between team members. To facilitate project task management, we chose to use the GitHub project tab's built in kanban feature to allow each member to freely create task items which could be claimed and tracked throughout the project.
-
-## Project Lessons
 
 ### MVP - Minimum Viable Product
 The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
@@ -115,6 +105,11 @@ Character Page
 - Image of selected drink
 - Ingredients list for the drink
 - Instruction on how to mix the drink
+
+## Project Diagram
+
+
+## Project Lessons
 
 ## Screenshots of Application
 
