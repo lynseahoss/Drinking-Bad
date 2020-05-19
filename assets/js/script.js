@@ -33,7 +33,7 @@ function feelingLucky() {
     url: "https://www.thecocktaildb.com/api/json/v1/1/random.php",
     method: "GET",
   }).then(function (response) {
-   // Drink image
+    // Drink image
     $("<img>")
       .addClass("ui image")
       .attr("src", "" + response.drinks[0].strDrinkThumb + "")
@@ -198,8 +198,6 @@ function createDrinkTiles(newCharID, newDrinkID) {
     url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + newDrinkID,
     method: "GET",
   }).then(function (response) {
-    //  randomDrinks.push(response.drinks[0].idDrink);
-
     $("<img>")
       .attr("data-drink", response.drinks[0].idDrink)
       .attr("data-char", newCharID)
@@ -208,11 +206,6 @@ function createDrinkTiles(newCharID, newDrinkID) {
       .appendTo("#drink-div2");
   });
 };
-
-$("#menu-pyp").on("click", function () {
-
-  repeatPickYourPoison()
-})
 
 $("#btn-one").on("click", function () {
 
