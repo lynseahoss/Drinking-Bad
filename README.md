@@ -20,7 +20,7 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
   * [Team Coordination](#team-coordination)
   * [Project Diagram](#project-diagram)
   * [Project Lessons](#project-lessons)
-    * [](#)
+    * [The Drinking Partner For Loop](#the-drinking-partner-for-loop)
     * [](#)
     * [](#)
   * [Screenshots of Application](#screenshots-of-application)
@@ -112,7 +112,7 @@ Character Page
 
 ## Project Diagram
 
-![Drinkin' Bad Project Diagram](assets/image/Drinkin_Bad_Project.PNG)
+![Drinkin' Bad Project Diagram](assets/image/drinkin_bad_project2.jpg)
 
 *Diagram of user experience flow for Drinkin' Bad Project*
 
