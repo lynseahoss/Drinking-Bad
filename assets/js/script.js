@@ -1,5 +1,6 @@
 //this fixed it
 var randomDrinks = [];
+var newCharID = ""
 var btnOne = $("#btn-one");
 var btnTwo = $("#btn-two");
 
@@ -138,8 +139,8 @@ function feelingLucky() {
       .css("display", "block")
       .appendTo("#button-group1")
       .text("Home")
-      .attr("id", "home-btn");
-    $("#home-btn").on("click", function () {
+      .attr("id", "home2");
+    $("#home2").on("click", function () {
       //
       location.reload();
     });
@@ -150,26 +151,30 @@ function repeatFeelLucky() {
   $("#container").empty();
   feelingLucky();
 }
-
+function repeatPickYourPoison(){
+  $("#container").empty();
+  pickYourPoison()
+}
 function pickYourPoison() {
   $("#question").text("Pick Your Poison");
   $("#image").attr("src", "assets/image/mask.jpg");
   $("#card-bodytext").text("TO SEE HOW BAD YOU ARE...");
+  $("<div>").addClass("ui buttons").attr("id", "btn-group")
   $("#btn-one")
     .addClass("ui inverted pink button centered")
     .attr("id", "dare-btn")
-    .text("Click if You Dare")
+    .text("Drink if You Dare")
     .appendTo("#button-group");
   $("#btn-two").addClass("ui inverted violet button centered")
-  .attr("id", "lucky")
-  .text("Feelin' lucky?")
-  .appendTo("#button-group");
- 
- 
+    .attr("id", "lucky")
+    .text("Feelin' lucky?")
+    .appendTo("#button-group");
+   
 
   $("#lucky").on("click", function () {
     feelingLucky();
   });
+
 
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
@@ -187,66 +192,71 @@ function pickYourPoison() {
       .attr("id", "drink-div2")
       .appendTo("#drink-div");
 
-      var sixButtonArray = [
-        {
-          drinkId: "12528",
-          charId: 1
-         },
-    
-         {
-           drinkId: "17194",
-           charId: 3
-         },
-         {
-           drinkId: "12101",
-           charId: 5
-         },
-         {
-           drinkId: "17180",
-           charId: 6
-         },
-         {
-           drinkId: "17225",
-           charId: 2
-         },
-         {
-           drinkId: "15082",
-           charId: 8
-         },
-      ]
-    
-         for (var i = 0; i < sixButtonArray.length; i++) {
-           var newDrinkID = sixButtonArray[i].drinkId;
-           console.log(sixButtonArray[i].drinkId);
-           var newCharID = sixButtonArray[i].charId;
-           console.log(sixButtonArray[i].charId)
-    
-           $.ajax({
-             url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+ newDrinkID,
-             method: "GET",
-           }).then(function (response) {
-             randomDrinks.push(response.drinks[0].idDrink);
-             $("<img>")
-               .attr("data-drink", response.drinks[0].idDrink)
-               .attr("data-char", newCharID)
-               .attr("src", response.drinks[0].strDrinkThumb)
-               .addClass("drink-btn")
-               .appendTo("#drink-div2");
-         })
-         }
+    var sixButtonArray = [
+      {
+        drinkId: "12528",
+        charId: 1
+      },
 
+      {
+        drinkId: "17194",
+        charId: 3
+      },
+      {
+        drinkId: "12101",
+        charId: 5
+      },
+      {
+        drinkId: "17180",
+        charId: 6
+      },
+      {
+        drinkId: "17225",
+        charId: 2
+      },
+      {
+        drinkId: "15082",
+        charId: 8
+      },
+    ]
+
+    for (var i = 0; i < sixButtonArray.length; i++) {
+      var newDrinkID = sixButtonArray[i].drinkId;
+      console.log(sixButtonArray[i].drinkId);
+      newCharID = sixButtonArray[i].charId;
+      console.log(sixButtonArray[i].charId)
+      createDrinkTiles(newCharID, newDrinkID)
+    }
   });
 }
 
-$("#menu-pyp").on("click", function() {
+function createDrinkTiles(newCharID, newDrinkID) {
+  $.ajax({
+    url: "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + newDrinkID,
+    method: "GET",
+  }).then(function (response) {
+    //  randomDrinks.push(response.drinks[0].idDrink);
+    console.log(newCharID)
+    $("<img>")
+      .attr("data-drink", response.drinks[0].idDrink)
+      .attr("data-char", newCharID)
+      .attr("src", response.drinks[0].strDrinkThumb)
+      .addClass("drink-btn")
+      .appendTo("#drink-div2");
+  });
+};
+
+
+
+$("#menu-pyp").on("click", function () {
   console.log("sad panda");
-  pickYourPoison();
-}) 
+  repeatPickYourPoison()
+})
 
 $("#btn-one").on("click", function () {
- 
+
   pickYourPoison();
-  
+
 });
 $("#menu-home").on("click", function () {
   location.reload();
