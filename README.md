@@ -10,7 +10,7 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
 
   [Drinkin' Bad](https://hlsorrells.github.io/Drinking-Bad/)
 
-  ![](assets/images/.gif)
+  ![](assets/images/drinkin-bad.gif)
 
 ## Table of Contents
 
@@ -61,6 +61,8 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
 ----
 
 ## Project Technology
+<details>
+    <summary markdown="span">Click to expand Project Technology Details</summary>
 
 Languages
 - HTML
@@ -77,11 +79,15 @@ APIs
 - [The Cocktail DB](https://www.thecocktaildb.com/api.php)
 - [Breaking Bad API](https://www.breakingbadapi.com/api/)
 - [Particle JS](https://www.particle.js)
+</details>
 
 ## Team Coordination
 Our team objective was to create a simple application that was entertaining to the user. As we began, we tried to divide the work in consideration of each members strengths and weaknesses. Lindsey and Samantha tackled selecting and learning the new CSS Framework for the project. Ashley and Heather were assigned to handle the Javascript and API tasks. To establish communication, we decided to perform daily stand-ups at least one per day and use Slack as an open communication channel between team members. To facilitate project task management, we chose to use the GitHub project tab's built in kanban feature to allow each member to freely create task items which could be claimed and tracked throughout the project.
 
 ## MVP - Minimum Viable Product
+<details>
+    <summary markdown="span">Click to expand MVP Details</summary>
+
 The first step after deciding on a project idea was to determine what the MVP (Minimum Viable Product) criteria would be. These criteria would establish the completiion of the project. At that point, we could decide whether to pursue further improvements or features that would be placed in the "icebox" kanban column. The following details the MVP that meets the assignment's requirements.
 
 Welcome page
@@ -109,6 +115,7 @@ Character Page
 - Image of selected drink
 - Ingredients list for the drink
 - Instruction on how to mix the drink
+</details>
 
 ## Project Diagram
 
@@ -122,26 +129,29 @@ Character Page
 Properly coding the for loop needed to dynamically create the drink image buttons need to generate the character mashup page was a challenge for the group. We tried several different approaches, but finally discovered that we could not leave the AJAX call within the for loop as it was asynchronous. Once we moved the AJAX call into a separate function and called that function in the for loop, the drink buttons were assigned their proper data values to be passed on to the next function.
 
 ## Screenshots of Application
+<details>
+    <summary markdown="span">Click to expand Screenshots of Application Details</summary>
 
-[Home Page Preview](assets/image/homePreview.png)
+![Home Page Preview](assets/image/homePreview.png)
 
 *Screenshot of the home page*
 
-[Pick Your Poison Page Preview](pypPreview.png)
+![Pick Your Poison Page Preview](pypPreview.png)
 
 *Screenshot of the Pick Your Poison page*
 
-[Random Drink Page Preview](randomDrink.png)
+![Random Drink Page Preview](randomDrink.png)
 
 *Screenshot of the Random Drink page*
 
-[Character Page Preview](drinkingNamePreview.png)
+![Character Page Preview](drinkingNamePreview.png)
 
 *Screenshot of the Character and Drink Mashup Page*
 
-[Random Quote Page](quotePreview.png)
+![Random Quote Page](quotePreview.png)
 
 *Screenshot of the Random Quote page*
+</details>
 
 ## Author
 
