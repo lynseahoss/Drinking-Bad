@@ -2,9 +2,9 @@
 
 ## Project Description
 
-This project is a simple application that can be expanded with later features. Inspired by the TV Drama "Breaking Bad" (BB), this application presents the user with a drink choice. Each drink choice leads to an information page on a BB character with their name, nickname, actor(ess) name, and picture. It also displays a selected drink with name, ingredients, and mixing instructions.
+This project is a simple application that can be expanded with later features. Inspired by the TV Drama "Breaking Bad" (BB), this application presents the user with a drink choice. Each drink choice leads to an information mashup page with BB character info, a drink selection, and the reason why that drink matches the character.
 
-This responsive application has a foundation in HTML, CSS and Javascript. It utilizes a Bulma CSS framework and three separate APIs. The focus was on clean and simple code that would allow for easy expansion with new features as the project developed. 
+This responsive application has a foundation in HTML, CSS and Javascript. It utilizes a Semantic UI CSS framework and three separate APIs. The focus was on clean and simple code that would allow for easy expansion with new features as the project developed. The team was 
 
 ## Deployment
 
@@ -18,6 +18,7 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
   * [Acceptance Criteria](#acceptance-criteria)
   * [Project Technology](#project-technology)
   * [Team Coordination](#team-coordination)
+  * [Project Diagram](#project-diagram)
   * [Project Lessons](#project-lessons)
     * [](#)
     * [](#)
@@ -75,6 +76,7 @@ CSS Framework
 APIs
 - [The Cocktail DB](https://www.thecocktaildb.com/api.php)
 - [Breaking Bad API](https://www.breakingbadapi.com/api/)
+- [Particle JS](https://www.particle.js)
 
 ## Team Coordination
 Our team objective was to create a simple application that was entertaining to the user. As we began, we tried to divide the work in consideration of each members strengths and weaknesses. Lindsey and Samantha tackled selecting and learning the new CSS Framework for the project. Ashley and Heather were assigned to handle the Javascript and API tasks. To establish communication, we decided to perform daily stand-ups at least one per day and use Slack as an open communication channel between team members. To facilitate project task management, we chose to use the GitHub project tab's built in kanban feature to allow each member to freely create task items which could be claimed and tracked throughout the project.
@@ -113,6 +115,9 @@ Character Page
 ![Drinkin' Bad Project Diagram](assets/image/Drinkin_Bad_Project.PNG)*Diagram of user experience flow for Drinkin' Bad Project*
 
 ## Project Lessons
+
+### The Drinking Partner For Loop
+Properly coding the for loop needed to dynamically create the drink image buttons need to generate the character mashup page was a challenge for the group. We tried several different approaches, but finally discovered that we could not leave the AJAX call within the for loop as it was asynchronous. Once we moved the AJAX call into a separate function and called that function in the for loop, the drink buttons were assigned their proper data values to be passed on to the next function.
 
 ## Screenshots of Application
 
