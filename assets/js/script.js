@@ -151,7 +151,10 @@ function repeatFeelLucky() {
   $("#container").empty();
   feelingLucky();
 }
-
+function repeatPickYourPoison(){
+  $("#container").empty();
+  pickYourPoison()
+}
 function pickYourPoison() {
   $("#question").text("Pick Your Poison");
   $("#image").attr("src", "assets/image/mask.jpg");
@@ -168,15 +171,10 @@ function pickYourPoison() {
     .appendTo("#button-group");
    
 
-
-
   $("#lucky").on("click", function () {
     feelingLucky();
   });
 
-  $("#quoteBTN").on("click", function(){
-    bbBadQuotes()
-  })
 
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
@@ -252,7 +250,7 @@ function createDrinkTiles(newCharID, newDrinkID) {
 
 $("#menu-pyp").on("click", function () {
   console.log("sad panda");
-  pickYourPoison();
+  repeatPickYourPoison()
 })
 
 $("#btn-one").on("click", function () {
