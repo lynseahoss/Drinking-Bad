@@ -65,6 +65,8 @@ Languages
 - HTML
 - CSS
 - Javascript
+
+Libraries
 - jQuery
 
 CSS Framework
@@ -108,6 +110,7 @@ Character Page
 
 ## Project Diagram
 
+![Drinkin' Bad Project Diagram](assets/image/Drinkin_Bad_Project.PNG)*Diagram of user experience flow for Drinkin' Bad Project*
 
 ## Project Lessons
 
