@@ -21,8 +21,8 @@ This responsive application has a foundation in HTML, CSS and Javascript. It uti
   * [Project Diagram](#project-diagram)
   * [Project Lessons](#project-lessons)
     * [The Drinking Partner For Loop](#the-drinking-partner-for-loop)
-    * [](#)
-    * [](#)
+    * [Sticking to the Plan](#sticking-to-the-plan)
+    * [Growing Pains as a Team](#growing-pains-as-a-team)
   * [Screenshots of Application](#screenshots-of-application)
   * [Contributing Authors](#contributing-authors)
 
@@ -129,6 +129,12 @@ Character Page
 ### The Drinking Partner For Loop
 Properly coding the for loop needed to dynamically create the drink image buttons need to generate the character mashup page was a challenge for the group. We tried several different approaches, but finally discovered that we could not leave the AJAX call within the for loop as it was asynchronous. Once we moved the AJAX call into a separate function and called that function in the for loop, the drink buttons were assigned their proper data values to be passed on to the next function.
 
+### Sticking to the Plan
+During the course of this project, we learned the valuable lesson of creating (and sticking to) a detailed MVP plan. As we started making small "improvements" that deviated from the original plan, we encountered many unexpected challenges with using tag id's and working with the dynamic Javascript. Sometimes, we had to pull out part of the dynamic JS and put it inside a separate function as we learned more about how asynchronous coding in JS behaves. While the AJAX calls appeared simplistic, they become more and more complex as we began demanding more functionality from our site.
+
+### Growing Pains as a Team
+This was the first team project for each of us which meant that we all got a crash course on learning the ins and outs of working on a project using GitHub. We learned how to create and manage branches; we learned how to push a branch, create pull requests, and then merge the branch to master; we learned how to communicate through multiple channels from GitHub to Slack to stay on track and on time. All of these challenges has taught us to be better programmers through communication, determination, and perserverance.
+
 ## Screenshots of Application
 <details>
     <summary markdown="span">Click to expand Screenshots of Application Details</summary>
@@ -156,10 +162,10 @@ Properly coding the for loop needed to dynamically create the drink image button
 
 ## Author
 
-[Ashley DeYoung](@ashleydeyoung)
+[Ashley DeYoung](https://github.com/ashleydeyoung)
 
-[Lindsey Lawson](@lynseahoss)
+[Lindsey Lawson](https://github.com/lynseahoss)
 
-[Samantha Morrison](@sm-pixel)
+[Samantha Morrison](https://github.com/sm-pixel)
 
-[Heather Sorrells](@Hlsorrells)
+[Heather Sorrells](https://github.com/Hlsorrells)
