@@ -71,14 +71,15 @@ Languages
 
 Libraries
 - jQuery
+- Particle JS
 
 CSS Framework
 - [Semantic UI](semantic-ui.com)
 
 APIs
 - [The Cocktail DB](https://www.thecocktaildb.com/api.php)
-- [Breaking Bad API](https://www.breakingbadapi.com/api/)
-- [Particle JS](https://www.particle.js)
+- [Breaking Bad API](https://breakingbadapi.com/documentation)
+
 </details>
 
 ## Team Coordination
