@@ -139,8 +139,8 @@ function feelingLucky() {
       .css("display", "block")
       .appendTo("#button-group1")
       .text("Home")
-      .attr("id", "home");
-    $("#home").on("click", function () {
+      .attr("id", "home2");
+    $("#home2").on("click", function () {
       //
       location.reload();
     });
