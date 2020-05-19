@@ -156,21 +156,27 @@ function pickYourPoison() {
   $("#question").text("Pick Your Poison");
   $("#image").attr("src", "assets/image/mask.jpg");
   $("#card-bodytext").text("TO SEE HOW BAD YOU ARE...");
+  $("<div>").addClass("ui buttons").attr("id", "btn-group")
   $("#btn-one")
     .addClass("ui inverted pink button centered")
     .attr("id", "dare-btn")
-    .text("Click if You Dare")
+    .text("Drink if You Dare")
     .appendTo("#button-group");
   $("#btn-two").addClass("ui inverted violet button centered")
     .attr("id", "lucky")
     .text("Feelin' lucky?")
     .appendTo("#button-group");
+   
 
 
 
   $("#lucky").on("click", function () {
     feelingLucky();
   });
+
+  $("#quoteBTN").on("click", function(){
+    bbBadQuotes()
+  })
 
   $("#dare-btn").on("click", function () {
     $(".content").css("display", "none");
@@ -241,6 +247,8 @@ function createDrinkTiles(newCharID, newDrinkID) {
       .appendTo("#drink-div2");
   });
 };
+
+
 
 $("#menu-pyp").on("click", function () {
   console.log("sad panda");
