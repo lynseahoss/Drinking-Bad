@@ -1,6 +1,6 @@
 $("#menu-quote").on("click", function () {
   console.log("Bad Quote");
-  bbBadQuotes();
+  repeatbbBadQuote()
 });
 
 var quoteID = ""
@@ -35,4 +35,9 @@ function bbBadQuotes() {
       .appendTo("#ui-card2");
 
 });
+
 }
+function repeatbbBadQuote() {
+    $("#container").empty();
+    bbBadQuotes();
+  }
