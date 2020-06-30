@@ -4,7 +4,7 @@
 
 This project is a simple application that can be expanded with later features. Inspired by the TV Drama "Breaking Bad" (BB), this application presents the user with a drink choice. Each drink choice leads to an information mashup page with BB character info, a drink selection, and the reason why that drink matches the character.
 
-This responsive application has a foundation in HTML, CSS and Javascript. It utilizes a Semantic UI CSS framework and three separate APIs. The focus was on clean and simple code that would allow for easy expansion with new features as the project developed. The team was 
+This responsive application has a foundation in HTML, CSS and Javascript. It utilizes a Semantic UI CSS framework and three separate APIs. The focus was on clean and simple code that would allow for easy expansion with new features as the project developed. 
 
 ## Deployment
 
